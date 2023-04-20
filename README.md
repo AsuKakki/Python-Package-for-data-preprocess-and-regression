@@ -4,11 +4,32 @@ This is a Python package for basic data preprocessing and regression tasks. It p
 
 ## Features of Modules  
 ### preprocess.py
-Import CSV files  
-Handle missing values  
+Import CSV files：  
+`
+df = import_csv(file_path)
+`  
+Handle missing values:  
+`
+df = handle_missing_values(df)
+`  
 Anomaly detection through visualization  
-Data normalization  
-Data discretization  
+`
+visualize_outliers(df)
+`  
+Data normalization:  
+`
+df_normalize = normalize(df)
+`  
+Data discretization:  
+`
+df_discretize = discretize(df, bins)
+`  
 ### regression.py
-Linear regression  
-Logistic regression  
+Linear regression:  
+`
+coef_linear = regression.linear_regression(Feature matrix, Target vector)
+`  
+Logistic regression:  
+`
+coef_logistic = regression.logistic_regression(Feature matrix, Target vector, Learning rate, iterations)
+`  
