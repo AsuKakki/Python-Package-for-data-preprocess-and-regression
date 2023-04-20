@@ -12,7 +12,7 @@ Handle missing values:
 `
 df = handle_missing_values(df)
 `  
-Anomaly detection through visualization  
+Anomaly detection through visualization:  
 `
 visualize_outliers(df)
 `  
