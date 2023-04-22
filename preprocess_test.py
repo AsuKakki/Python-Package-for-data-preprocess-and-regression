@@ -6,7 +6,7 @@ bins = 5
 
 # Import the CSV file
 df = import_csv(file_path)
-print("Row data:\n", df)
+print("Raw data:\n", df)
 
 # Deal with missing values
 df = handle_missing_values(df)
