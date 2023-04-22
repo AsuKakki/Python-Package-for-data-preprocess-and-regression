@@ -1,4 +1,3 @@
-import pandas as pd
 from preprocess import import_csv, handle_missing_values, visualize_outliers, normalize, discretize
 
 file_path = "testfile.csv"
