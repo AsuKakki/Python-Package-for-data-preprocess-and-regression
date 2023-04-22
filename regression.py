@@ -13,9 +13,9 @@ def linear_regression(X, y):
     X = np.hstack([np.ones((X.shape[0], 1)), X])
 
     # Compute the coefficients using the normal equation
-    Coef = np.linalg.inv(X.T @ X) @ X.T @ y
+    coef = np.linalg.inv(X.T @ X) @ X.T @ y
 
-    return Coef
+    return coef
 
 def sigmoid(z):
     """
@@ -46,15 +46,15 @@ def logistic_regression(X, y, alpha=0.01, iterations=1000):
     X = np.hstack([np.ones((m, 1)), X])
 
     # Initialize the coefficients with random values
-    beta = np.random.randn(n + 1)
+    coef = np.random.randn(n + 1)
 
     # Perform gradient descent for logistic regression
     for i in range(iterations):
         # Compute the predicted probabilities using the sigmoid function
-        z = X @ beta
+        z = X @ coef
         y_pred = sigmoid(z)
 
         # Update the coefficients using the gradient and learning rate
-        beta -= alpha * (X.T @ (y_pred - y)) / m
+        coef -= alpha * (X.T @ (y_pred - y)) / m
 
-    return beta
+    return coef
